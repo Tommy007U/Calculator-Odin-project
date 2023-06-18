@@ -1,0 +1,54 @@
+*{
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+body{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    align-items: center;
+    width: 100vw;
+    height: 100vh;
+}
+.btn{
+    width: 50px;
+    height: 50px;
+    margin: 20px
+}
+.number{
+    border: 1px solid rgb(207, 240, 158);
+    border-radius: 8px;
+}
+.number:hover{
+    background-color: rgb(199, 230, 87);
+}
+.operator{
+    border: 1px solid rgb(204, 203, 211);
+    border-radius: 8px;
+}
+.operator:hover{
+    background-color: rgb(95, 95, 194);
+}
+.equal{
+    border: 1px solid rgb(196, 195, 191);
+    border-radius: 8px;
+}
+.equal:hover{
+    background-color: rgb(233, 230, 67);
+}
+.decimal{
+    border: 1px solid rgb(243, 220, 220);
+    border-radius: 8px;
+}
+.decimal:hover{
+    background-color: rgb(165, 97, 109);
+}
+#clear-btn{
+    border: 1px solid rgb(221, 209, 250);
+    border-radius: 8px;
+}
+#clear-btn:hover{
+    background-color: rgb(105, 105, 116);
+}

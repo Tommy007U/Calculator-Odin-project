@@ -59,7 +59,19 @@ body{
     flex-direction: row;
 }
 #screen{
-    width: 280px;
-    height: 65px;
-    border: 1px solid gray;
+    display: flex;
+    justify-content: flex-end;
+    align-items: flex-end;
+    flex-direction: column;
+    width: 285px;
+    height: 75px;
+    border: 1px solid rgb(110, 104, 104);
+    border-radius: 5px;
+    color:blue;
+}
+.first-value{
+    font-size: 20px;
+}
+.second-value{
+    font-size: 30px;
 }

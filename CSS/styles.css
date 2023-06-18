@@ -52,3 +52,14 @@ body{
 #clear-btn:hover{
     background-color: rgb(105, 105, 116);
 }
+.top-row{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: row;
+}
+#screen{
+    width: 280px;
+    height: 65px;
+    border: 1px solid gray;
+}

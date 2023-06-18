@@ -11,17 +11,19 @@ document.addEventListener("DOMContentLoaded", function(){
     let decimal_btn = document.querySelector(".decimal");
     let firstValue = document.querySelector(".first-value");
     let secondValue = document.querySelector(".second-value");
-
+     // below is f(x) will be selecting number once click
     numbers_btn.forEach((number) => number.addEventListener("click", function(e){
         handleNumber(e.target.textContent)
         secondValue.textContent = currentValue;
     }))
+      // f(x) for selecting operator once clicked
      operators_btn.forEach((op) => op.addEventListener("click", function(e){
         handleOperater(e.target.textContent)
         firstValue.textContent = previousValue + "  " + operator;
         secondValue.textContent = currentValue;
     })) 
 
+    // f(x) to clear the screen for new operation to be done
     clear_btn.addEventListener("click", function(){
         previousValue = "";
         currentValue = "";

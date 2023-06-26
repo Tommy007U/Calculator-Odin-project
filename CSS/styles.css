@@ -8,11 +8,28 @@ body{
     justify-content: center;
     align-items: center;
     flex-direction: column;
-    align-items: center;
     width: 100vw;
     height: 100vh;
 }
+@media screen and (min-width: 600px) and (orientation: landscape){
+    body{
+        background-color:cornflowerblue;
+        
+    }
+}
+.main-div{
+    background-color: rgb(75, 94, 95);
+}
+@media screen and (min-width: 600px) and (orientation: landscape){
+    .main-div{
+        background-color: seagreen;
+    }
+}
+
 .btn{
+    font-size: 25px;
+    font-weight: 500;
+    text-align: center;
     width: 50px;
     height: 50px;
     margin: 20px
@@ -67,7 +84,9 @@ body{
     height: 75px;
     border: 1px solid rgb(110, 104, 104);
     border-radius: 5px;
-    color:blue;
+    color:rgb(69, 221, 9);
+    background-color: rgb(109, 108, 106);
+    margin-left: 15px;
 }
 .first-value{
     font-size: 20px;

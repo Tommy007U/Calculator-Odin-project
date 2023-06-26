@@ -31,6 +31,23 @@ document.addEventListener("DOMContentLoaded", function(){
         firstValue.textContent = currentValue;
         secondValue.textContent = currentValue;
     })
+
+    equal_btn.addEventListener("click", function(){  // the equal btn to give result of the operation
+        if(currentValue != " " && previousValue != " "){       
+        calculate()
+        firstValue.textContent = " ";
+        if(previousValue.length <= 6 ){
+            secondValue.textContent = previousValue;
+        }else{
+            secondValue.textContent = previousValue.slice(0, 5) + "..." //print nbr nolonger thn 6 digits + ... to show is the long nbr
+        }
+      }  
+        
+    })
+
+    decimal_btn.addEventListener("click", function(){ //on click of the. thef(x)adds it as decimal nbr.
+        addDecimal();
+    })
 })
 function handleNumber(num){
     if(currentValue.length <= 6){
@@ -44,6 +61,33 @@ function handleOperater(op){
     currentValue = "";
 }
 
+function calculate(){
+    previousValue = Number(previousValue);
+    currentValue = Number(currentValue);
+    if(operator === "+"){
+        previousValue += currentValue
+    }else if(operator === "-"){
+        previousValue -= currentValue;
+    }else if(operator === "X"){
+        previousValue *= currentValue;
+
+    }else{
+        previousValue /= currentValue;
+    }
+    previousValue = roundNumber(previousValue);
+    previousValue = previousValue.toString();
+    currentValue = previousValue.toString();
+}
+
+function roundNumber(num){
+    return Math.round(num * 10000)/10000;
+}
+
+function addDecimal(){     // implement the decimal on the calculation 
+    if(currentValue.includes(".")){
+        currentValue += ".";
+    }
+}
 
 /**const add = function() {
 	
